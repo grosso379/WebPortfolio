@@ -1,0 +1,467 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* ========================================== MY CODE STARTS HERE ============================================*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------ Header styling ------------------------------------------------*/
+
+a {
+  text-decoration: none;
+  font-style: none;
+  color: black;
+}
+
+.top-header {
+  background-color: white;
+  width: 100%;
+  height: 100px;
+}
+
+.top-header p {
+  display: block;
+  font-size: 36px;
+  font-family: Catamaran, sans-serif;
+  font-weight: 700;
+  color: #161414;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0 5px;
+}
+
+.top-header nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+.top-header nav ul li {
+  padding: 10px 10px;
+  height: 100%;
+  width: 150px;
+}
+
+.top-header nav ul li a {
+  font-size: 24px;
+  font-family: Catamaran, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  color: #161414;
+}
+
+@media only screen and (min-width: 1000px) {
+  .top-header {
+    height: 80px;
+  }
+
+  .top-header .header-wrapper {
+    display: flex;
+    height: 80px;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .top-header .header-wrapper p {
+    padding: 0px 30px 0px 150px;
+    margin: 0px;
+    width: fit-content;
+    font-size: 30px;
+    font-weight: 500;
+    border-right: 2px solid #111111;
+    line-height: 40px;
+  }
+
+  .top-header .header-wrapper nav ul {
+    padding-left: 30px;
+  }
+
+  .top-header .header-wrapper nav ul li a {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 40px;
+  }
+
+  .top-header .header-wrapper nav ul li a:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+    color: coral;
+  }
+}
+
+/* -------------------------------------------- Main Styling ------------------------------------------------*/
+
+.index-banner {
+  background-image: url("img/banner.jpg");
+  background-size: cover;
+  height: calc(100vh - 100px);
+  background-position: 30% 0%;
+}
+
+.index-banner .index-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.index-banner .index-container h2 {
+  box-sizing: border-box;
+  font-size: 60px;
+  font-family: Catamaran, sans-serif;
+  font-weight: 900;
+  line-height: 70px;
+  color: white;
+  text-shadow: 2px 2px 8px #161414;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.index-banner .index-container h1 {
+  box-sizing: border-box;
+  font-size: 36px;
+  font-family: Cormorant Garamond;
+  font-style: italic;
+  font-weight: 300;
+  color: white;
+  text-shadow: 3px 3px 4px #161414;
+  width: fit-content;
+  text-align: center;
+  line-height: 40px;
+}
+
+.index-boxes {
+  background-color: white;
+}
+
+.index-boxes .index-boxlink {
+  margin: 15px 15px 0px;
+  width: calc(100% - 30px);
+  height: 100px;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.index-boxes .index-boxlink h3 {
+  line-height: 100px;
+  font-size: 24px;
+  color: black;
+  font-family: Catamaran, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1000px) {
+  .index-banner {
+    height: 60vh;
+  }
+
+  .index-boxes .boxes-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 0px;
+  }
+
+  .index-boxes .index-boxlink {
+    height: 150px;
+    width: 40vw;
+    margin: 10px 10px 10px;
+  }
+
+  .index-boxes .index-boxlink h3 {
+    line-height: 150px;
+    font-size: 40px;
+  }
+}
+
+/* ------------------------------------------ Footer styling ------------------------------------------------*/
+
+footer {
+  background-color: black;
+  height: fit-content;
+  margin-top: 20px;
+}
+
+.footer-wrapper {
+  padding: 20px 20px;
+}
+
+.footer-wrapper ul {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.footer-wrapper ul li {
+  list-style-type: none;
+  position: relative;
+  height: 30px;
+  width: 100px;
+}
+
+.footer-wrapper ul li a {
+  font-family: Catamaran, sans-serif;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  color: white;
+}
+
+.footer-wrapper .icons {
+  display: block;
+  float: right;
+  margin-right: 30px;
+}
+
+.footer-wrapper .icons a {
+  display: block;
+  font-size: 20px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  footer {
+    margin: 0px 8vw 0px;
+  }
+  .footer-wrapper {
+    padding: 30px;
+  }
+
+  .footer-wrapper .icons a .fab {
+    transition: 0.8s;
+    position: relative;
+  }
+
+  .footer-wrapper .icons a:hover .fab {
+    transform: rotateY(360deg);
+  }
+
+  .footer-wrapper .icons a {
+    transition: 0.5s;
+  }
+
+  .footer-wrapper .icons a:hover {
+    background-color: rgb(236, 107, 60);
+  }
+
+  .footer-wrapper ul li a:hover {
+    transition: 0.5s;
+    color: coral;
+    font-size: 24px;
+  }
+}
+
+/* ======================================== TEST ==================================================== */
+
+/* .test-container {
+  display: flex;
+  width: 50vw;
+  height: 50vh;
+  margin: 25vh auto;
+  border: 3px solid red;
+  justify-content: center;
+  align-items: center;
+}
+
+.test-container a {
+  position: absolute;
+  font-size: 40px;
+  color: gray;
+  text-transform: uppercase;
+}
+
+.test-container a::before {
+  font-size: 40px;
+  content: "Hola";
+  position: absolute;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  width: 0;
+  overflow: hidden;
+  transition: 0.9s;
+}
+
+.test-container a:hover::before {
+  width: 100%;
+} */
