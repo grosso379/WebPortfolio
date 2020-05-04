@@ -214,7 +214,7 @@ a {
 .top-header nav ul li {
   padding: 10px 10px;
   height: 100%;
-  width: 150px;
+  width: fit-content;
 }
 
 .top-header nav ul li a {
@@ -223,6 +223,15 @@ a {
   font-weight: 500;
   text-decoration: none;
   color: #161414;
+}
+
+.top-header .icon-container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image: url(img/top-icon.png);
+  background-size: 100%;
+  display: none;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -238,7 +247,7 @@ a {
   }
 
   .top-header .header-wrapper p {
-    padding: 0px 30px 0px 150px;
+    padding: 0px 30px 0px 5vw;
     margin: 0px;
     width: fit-content;
     font-size: 30px;
@@ -249,6 +258,10 @@ a {
 
   .top-header .header-wrapper nav ul {
     padding-left: 30px;
+  }
+
+  .top-header .header-wrapper nav ul li {
+    width: 150px;
   }
 
   .top-header .header-wrapper nav ul li a {
@@ -263,15 +276,23 @@ a {
     transform: scale(1.2);
     color: coral;
   }
+
+  .top-header .icon-container {
+    display: block;
+    position: absolute;
+    right: 5vw;
+  }
 }
 
 /* -------------------------------------------- Main Styling ------------------------------------------------*/
 
 .index-banner {
+  display: block;
   background-image: url("img/banner.jpg");
   background-size: cover;
-  height: calc(100vh - 100px);
+  min-height: fit-content;
   background-position: 30% 0%;
+  padding: 10vh 0px;
 }
 
 .index-banner .index-container {
@@ -280,11 +301,12 @@ a {
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  min-height: fit-content;
 }
 
 .index-banner .index-container h2 {
   box-sizing: border-box;
-  font-size: 60px;
+  font-size: 3em;
   font-family: Catamaran, sans-serif;
   font-weight: 900;
   line-height: 70px;
@@ -292,11 +314,12 @@ a {
   text-shadow: 2px 2px 8px #161414;
   text-transform: uppercase;
   text-align: center;
+  margin: 0px 10px;
 }
 
 .index-banner .index-container h1 {
   box-sizing: border-box;
-  font-size: 36px;
+  font-size: 2.4em;
   font-family: Cormorant Garamond;
   font-style: italic;
   font-weight: 300;
@@ -305,18 +328,25 @@ a {
   width: fit-content;
   text-align: center;
   line-height: 40px;
+  margin: 0px 10px;
 }
 
 .index-boxes {
   background-color: white;
 }
 
+.box-background {
+  background-color: #f2f2f2;
+  box-shadow: 1px 1px 15px coral;
+  margin: 10px;
+}
+
 .index-boxes .index-boxlink {
-  margin: 15px 15px 0px;
   width: calc(100% - 30px);
   height: 100px;
-  background-color: #f2f2f2;
   text-align: center;
+  margin: 0 auto;
+  background-color: #f2f2f2;
 }
 
 .index-boxes .index-boxlink h3 {
@@ -330,7 +360,11 @@ a {
 
 @media only screen and (min-width: 1000px) {
   .index-banner {
-    height: 60vh;
+    height: 75vh;
+  }
+
+  .index-banner .index-container h1 {
+    margin: 0 10vw;
   }
 
   .index-boxes .boxes-wrapper {
@@ -343,21 +377,43 @@ a {
   .index-boxes .index-boxlink {
     height: 150px;
     width: 40vw;
-    margin: 10px 10px 10px;
   }
 
   .index-boxes .index-boxlink h3 {
+    position: relative;
+    display: block;
     line-height: 150px;
     font-size: 40px;
+    transition: 1s all ease;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .index-boxes .index-boxlink h3::before {
+    content: "";
+    background-color: coral;
+    display: block;
+    border-radius: 50%;
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: 1s;
+  }
+
+  .index-boxes .index-boxlink h3:hover::before {
+    width: 120%;
+    height: 400%;
   }
 }
-
 /* ------------------------------------------ Footer styling ------------------------------------------------*/
 
 footer {
   background-color: black;
   height: fit-content;
-  margin-top: 20px;
 }
 
 .footer-wrapper {
@@ -431,7 +487,6 @@ footer {
     font-size: 24px;
   }
 }
-
 /* ======================================== TEST ==================================================== */
 
 /* .test-container {
